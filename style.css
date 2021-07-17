@@ -1,0 +1,211 @@
+:root {
+  --main-background: hsl(233, 47%, 7%);
+  --card-background: hsl(244, 38%, 16%);
+  --accent: hsl(277, 64%, 61%);
+  --main-heading-stats: hsl(0, 0%, 100%);
+  --main-paragrah: hsla(0, 0%, 100%, 0.75);
+  --stat-headings: hsla(0, 0%, 100%, 0.6);
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+
+html {
+  height: 100vh;
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.5rem;
+  background-color: var(--main-background);
+}
+
+li {
+  list-style: none;
+}
+
+.container {
+  min-height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 0 auto;
+}
+
+.card {
+  background-color: var(--card-background);
+  color: white;
+  width: calc(min(87%, 60rem));
+  margin: 8.9rem auto;
+}
+
+.card__image {
+  height: 24rem;
+  background-color: var(--accent);
+  border-radius: 0.5rem 0.5rem 0 0;
+}
+
+.card__image .desktop-image {
+  display: none;
+}
+
+.card__image .mobile-image {
+  width: 100%;
+  height: 100%;
+  mix-blend-mode: overlay;
+}
+
+.card__main {
+  text-align: center;
+  padding: 4.4rem 3.4rem 3.6rem 3.4rem;
+  border-radius: 0 0 0.5rem 0.5rem;
+}
+
+.card__header {
+  font-size: 3rem;
+}
+
+.card__header .accent {
+  color: var(--accent);
+}
+
+.card__body {
+  font-size: 1.8rem;
+  line-height: 1.5;
+  color: var(--main-paragrah);
+  margin-top: 2rem;
+}
+
+.card__stats {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 3rem auto;
+}
+
+.card__stats .stat {
+  margin-top: 2rem;
+}
+
+.card__stats .stat__value {
+  font-size: 1.9rem;
+  color: var(--main-heading-stats);
+  font-weight: bold;
+}
+
+.card__stats .stat__label {
+  font-size: 1.6rem;
+  font-family: "Lexend Deca", sans-serif;
+  color: var(--stat-headings);
+  text-transform: uppercase;
+  margin-top: 0.5rem;
+}
+
+@media (min-width: 375px) {
+  .card {
+    margin: 5rem auto;
+  }
+  .card__image {
+    height: 100%;
+  }
+  .card__image .desktop-image {
+    width: 100%;
+    display: block;
+    height: 100%;
+    mix-blend-mode: overlay;
+  }
+  .card__image .mobile-image {
+    display: none;
+  }
+}
+
+@media (min-width: 1024px) {
+  .card {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    min-width: 110rem;
+    height: 44.6rem;
+  }
+  .card__image {
+    min-width: 54rem;
+    height: 100%;
+    -webkit-box-flex: 1.1;
+        -ms-flex: 1.1;
+            flex: 1.1;
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+    border-radius: 0 0.5rem 0.5rem 0;
+  }
+  .card__image .desktop-image {
+    width: 100%;
+    height: 100%;
+    display: block;
+    mix-blend-mode: overlay;
+  }
+  .card__image .mobile-image {
+    display: none;
+  }
+  .card__main {
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+    padding-top: 6.5rem;
+    padding-bottom: 6.5rem;
+    padding-left: 6.7rem;
+    padding-right: 6.7rem;
+    text-align: left;
+    border-radius: 0.5rem 0 0 0.5rem;
+  }
+  .card__header {
+    font-size: 3.2rem;
+  }
+  .card__body {
+    font-size: 1.2rem;
+    line-height: 1.7;
+    margin-top: 4rem;
+    padding-right: 7rem;
+  }
+  .card__stats {
+    font-size: 1.9rem;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-top: 8rem;
+  }
+  .card__stats > * + * {
+    margin-left: 6.4rem;
+  }
+  .card__stats__value {
+    font-size: 1.9rem;
+  }
+  .card__stats__label {
+    font-size: 1.4rem;
+  }
+}

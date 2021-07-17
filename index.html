@@ -9,42 +9,43 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca&display=swap"
     rel="stylesheet">
-  <link rel="stylesheet" href="styles/style.css">
+  <link rel="stylesheet" href="style.css">
   <title>Frontend Mentor | Stats preview card component</title>
 </head>
 
 <body>
-  <div class="container">
+  <main class="container">
     <div class="card">
       <div class="card__image">
-        <img class="img-mobile" src="images/image-header-mobile.jpg" alt="hero">
-        <img class="img-desktop" src="images/image-header-desktop.jpg" alt="hero">
+        <img class="mobile-image" src="/images/image-header-mobile.jpg" alt="">
+        <img class="desktop-image" src="/images/image-header-desktop.jpg" alt="">
       </div>
       <div class="card__main">
-        <div class="card__header">Get <span class="accent">insights</span> that help your business grow.</div>
-        <div class="card__body">
+        <h1 class="card__header">Get <span class="accent">insights</span> that help your business grow.</h1>
+        <p class="card__body">
           Discover the benefits of data analytics and make better decisions regarding revenue, customer
           experience, and overall efficiency.
-        </div>
-        <div class="card__stats">
-          <div class="stat">
-            <div class="stat__value">10k+</div>
-            <div class="stat__label">companies</div>
-          </div>
+        </p>
+        <ul class="card__stats">
+          <li class="stat">
+            <p class="stat__value">10k+</p>
+            <p class="stat__label">companies</p>
+          </li>
 
-          <div class="stat">
-            <div class="stat__value">314</div>
-            <div class="stat__label">templates</div>
-          </div>
+          <li class="stat">
+            <p class="stat__value">314</p>
+            <p class="stat__label">templates</p>
+          </li>
 
-          <div class="stat">
-            <div class="stat__value">12M+</div>
-            <div class="stat__label">queris</div>
-          </div>
-        </div>
+          <li class="stat">
+            <p class="stat__value">12M+</p>
+            <p class="stat__label">queris</p>
+          </li>
+        </ul>
+
       </div>
     </div>
-  </div>
+  </main>
 </body>
 
 </html>
