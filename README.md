@@ -22,7 +22,7 @@ Users should be able to:
 ### Screenshot
 
 <img src="/images/desktop.jpg" width="70%" />
-<img src="/images/mobile.jpg" height="250" />
+<img src="/images/mobile.jpg" height="300" />
 
 ### Links
 
