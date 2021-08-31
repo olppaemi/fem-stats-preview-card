@@ -1,0 +1,146 @@
+:root {
+  --very-dark-blue: hsl(233, 47%, 7%);
+  --dark-desaturated-blue: hsl(244, 38%, 16%);
+  --soft-violet: hsl(277, 64%, 61%);
+  --white: hsl(0, 0%, 100%);
+  --transparent-white1: hsla(0, 0%, 100%, 0.75);
+  --transparent-white2: hsla(0, 0%, 100%, 0.6);
+}
+
+$main-bg: var(--very-dark-blue);
+$card-bg: var(--dark-desaturated-blue);
+$accent: var(--soft-violet);
+$main-heading: var(--white);
+$main-paragraph: var(--transparent-white1);
+$stat-heading: var(--transparent-white2);
+$stat: var(--white);
+
+@function rem($px) {
+  @return ($px / 16) * 1rem;
+}
+
+@function percent($width, $container) {
+  @return ($width / $container) * 100%;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  background: $main-bg;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.wrapper {
+  max-width: 1110px;
+
+  @media screen and (max-width: 1024px) {
+    max-width: 345px;
+  }
+}
+
+.card {
+  display: flex;
+  border-radius: rem(5);
+  width: 100%;
+
+  @media screen and (max-width: 1024px) {
+    min-height: rem(780);
+    flex-direction: column-reverse;
+    text-align: center;
+    padding-top: rem(88);
+    padding-bottom: rem(88);
+  }
+
+  &__hero {
+    width: percent(540, 1110);
+    background: center / cover no-repeat url(/images/image-header-desktop.jpg), $accent;
+    background-blend-mode: multiply;
+    border-radius: 0 rem(5) rem(5) 0;
+
+    @media screen and (max-width: 1024px) {
+      width: 100%;
+      min-height: rem(240);
+      background: center / cover no-repeat url(/images/image-header-mobile.jpg), $accent;
+      border-radius: rem(5) rem(5) 0 0;
+    }
+  }
+
+  &__contents {
+    width: percent(570, 1110);
+    padding: rem(72) rem(120) rem(64) rem(72);
+
+    @media screen and (max-width: 1024px) {
+      width: 100%;
+      min-height: rem(540);
+      height: percent(540, 780);
+      padding: rem(36) rem(40);
+    }
+  }
+
+  &__header {
+    font-size: rem(36);
+    color: $main-heading;
+    margin-bottom: rem(28);
+
+    .accent {
+      color: $accent;
+    }
+
+    @media screen and (max-width: 1024px) {
+      font-size: rem(28);
+    }
+  }
+
+  &__main {
+    font-size: rem(15);
+    color: $main-paragraph;
+    margin-bottom: rem(68);
+    line-height: rem(25);
+    letter-spacing: 0.2%;
+
+    @media screen and (max-width: 1024px) {
+      margin-bottom: rem(40);
+    }
+  }
+
+  &__stats {
+    display: flex;
+
+    @media screen and (max-width: 1024px) {
+      flex-direction: column;
+    }
+    .stat {
+      &__value {
+        font-size: rem(24);
+        font-weight: bold;
+        color: $stat;
+      }
+      &__name {
+        font-size: rem(12);
+        font-family: "Lexend Deca", sans-serif;
+        color: $stat-heading;
+        text-transform: uppercase;
+        letter-spacing: 8%;
+      }
+    }
+
+    & > * + * {
+      margin-left: rem(64);
+
+      @media screen and (max-width: 1024px) {
+        margin: 0;
+        margin-top: rem(28);
+      }
+    }
+  }
+}

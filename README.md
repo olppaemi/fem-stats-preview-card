@@ -1,6 +1,6 @@
 # Frontend Mentor - Stats preview card component solution
 
-This is a solution to the [Stats preview card component challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/stats-preview-card-component-8JqbgoU62). Frontend Mentor challenges help you improve your coding skills by building realistic projects. 
+This is a solution to the [Stats preview card component challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/stats-preview-card-component-8JqbgoU62). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
 
 ## Table of contents
 
@@ -10,9 +10,6 @@ This is a solution to the [Stats preview card component challenge on Frontend Me
   - [Links](#links)
 - [My process](#my-process)
   - [Built with](#built-with)
-
-
-**Note: Delete this note and update the table of contents based on what sections you keep.**
 
 ## Overview
 
@@ -24,13 +21,13 @@ Users should be able to:
 
 ### Screenshot
 
-![](./screenshot.png)
-
+<img src="/images/desktop.jpg" width="70%" />
+<img src="/images/desktop.jpg" height="250" />
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://www.frontendmentor.io/solutions/html-css-kmg5OPnCG)
-- Live Site URL: [Add live site URL here](https://stats-preview-card-component-rouge-five.vercel.app/)
+- Solution URL: [Solution URL here](https://www.frontendmentor.io/solutions/html-css-kmg5OPnCG)
+- Live Site URL: [Live site URL here](https://stats-preview-card-component-rouge-five.vercel.app/)
 
 ### Built with
 
